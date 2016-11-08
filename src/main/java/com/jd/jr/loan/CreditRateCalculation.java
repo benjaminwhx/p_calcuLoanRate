@@ -18,6 +18,15 @@ public class CreditRateCalculation {
     }
 
     /**
+     * 打印出京东金融【金条】的年化利率
+     * 现在默认利率每天0.04%
+     */
+    @Flag(organizationName = "京东金融金条")
+    private static void printJDJRJTYearInterestRate() {
+        System.out.println("京东金融金条年化利率为: " + getYearInterestRateStr(0.0004));
+    }
+
+    /**
      * 打印出【中信圆梦金】的年化利率
      * @param principal 本金
      * @param period 期数
@@ -108,8 +117,9 @@ public class CreditRateCalculation {
     }
 
     public static void main(String[] args) {
-        printWXWldYearInterestRate();
-        printZSYMJYearInterestRate(12000, 12, 0.0075);
-        print51RPDYearInterestRate(12000, 12, 0.0065);
+//        printWXWldYearInterestRate();
+        printJDJRJTYearInterestRate();
+//        printZSYMJYearInterestRate(12000, 12, 0.0075);
+//        print51RPDYearInterestRate(12000, 12, 0.0045);
     }
 }
